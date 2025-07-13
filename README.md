@@ -1,12 +1,40 @@
-# React + Vite
+# O que é esta aplicação?
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esta é uma aplicação simples que permite buscar por produtos e adicionar produtos a um carrinho. Seu propósito principal é demonstrar o uso de APIs para integração.
+O front-end é feito com React e Vite como ferramenta de build. Para o back-end, foi utilizado o supabase.  
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Pré-requisitos
 
-## Expanding the ESLint configuration
+- Node.js
+- Conta no [Supabase](https://supabase.com) (você pode criar uma gratuitamente!)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Como executar o projeto
+
+Clone o repositório:
+
+```bash
+git clone https://github.com/FelipeAugustoAMF/CartPage.git
+cd CartPage
+```
+
+Instale as dependências:
+
+```bash
+npm install
+```
+
+Crie o arquivo `.env` na raiz do projeto com as variáveis do Supabase:
+
+```env
+VITE_SUPABASE_URL=URLdoSupabase
+VITE_SUPABASE_ANON_KEY=ChaveAnonimaDoSupabase
+```
+
+Rode o projeto em desenvolvimento:
+
+```bash
+npm run dev
+```
+
+A aplicação ficará disponível em [http://localhost:5173](http://localhost:5173).
