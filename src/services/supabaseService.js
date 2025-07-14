@@ -12,6 +12,11 @@ async function searchProducts(term) {
   // GET https://scviprytakseyijnsljv.supabase.co/rest/v1/cartItems?select=quantity,product:products(*)&order=createdAt.asc
 }
 
+// Insere um novo produto no banco de dados
+async function insertProduct(product) {
+  return await supabase.from("products").insert([product]);
+}
+
 // Obtém todos os itens salvos no carrinho
 async function loadCart() {
   return await supabase
@@ -64,6 +69,7 @@ async function removeFromCart(productId) {
 export const supabaseService = {
   products: {
     search: searchProducts,
+    insert: insertProduct,
   },
   cart: {
     loadCart,
